@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const projectList = projectsSection.querySelector('ul');
   projectList.setAttribute('role', 'list');
 
-  const projectItems = projectList.querySelectorAll('li');
+  const projectItems = projectsSection.querySelectorAll('li');
   projectItems.forEach(item => item.setAttribute('role', 'listitem'));
 });
+

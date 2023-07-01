@@ -1,28 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const heading = document.getElementById('portfolio-heading');
-  heading.setAttribute('role', 'heading');
-  heading.setAttribute('aria-level', '1');
+// Example JavaScript code for portfolio
 
-  const navigation = document.getElementById('portfolio-navigation');
-  navigation.setAttribute('role', 'navigation');
+// Function to toggle a mobile navigation menu
+function toggleMenu() {
+  var nav = document.getElementById("nav");
+  nav.classList.toggle("show");
+}
 
-  const aboutSection = document.getElementById('about');
-  const aboutHeading = aboutSection.querySelector('h2');
-  aboutHeading.setAttribute('role', 'heading');
-  aboutHeading.setAttribute('aria-level', '2');
-
-  const profileImage = aboutSection.querySelector('img');
-  profileImage.setAttribute('role', 'img');
-
-  const projectsSection = document.getElementById('projects');
-  const projectsHeading = projectsSection.querySelector('h2');
-  projectsHeading.setAttribute('role', 'heading');
-  projectsHeading.setAttribute('aria-level', '2');
-
-  const projectList = projectsSection.querySelector('ul');
-  projectList.setAttribute('role', 'list');
-
-  const projectItems = projectsSection.querySelectorAll('li');
-  projectItems.forEach(item => item.setAttribute('role', 'listitem'));
-});
+// Add event listener to the navigation menu button
+var menuButton = document.getElementById("menu-button");
+menuButton.addEventListener("click", toggleMenu);
 
